@@ -10,8 +10,9 @@ module.exports = {
     'plugin:vue/essential',
     'plugin:@typescript-eslint/recommended',
   ],
-  parser: '@typescript-eslint/parser',
+  parser: 'vue-eslint-parser',
   parserOptions: {
+    parser: '@typescript-eslint/parser',
     ecmaVersion: 11,
     sourceType: 'module',
     project: './tsconfig.json',
@@ -65,7 +66,7 @@ module.exports = {
     'vue/no-v-for-template-key': ['off'],
   },
   plugins: [
-    '@typescript-eslint',
     'vue',
+    '@typescript-eslint',
   ],
 }
