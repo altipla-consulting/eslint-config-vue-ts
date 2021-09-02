@@ -15,6 +15,7 @@ module.exports = {
     ecmaVersion: 11,
     sourceType: 'module',
     project: './tsconfig.json',
+    extraFileExtensions: ['.vue'],
   },
   ignorePatterns: ['*.css', '/*.*'],
   rules: {
