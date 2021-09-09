@@ -43,7 +43,9 @@ module.exports = {
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
 
-    'no-undef': 'error',
+    // Typescript compiler already checks this type of errors.
+    'no-undef': 'off',
+
     'space-before-blocks': 'error',
     'space-infix-ops': 'error',
 
