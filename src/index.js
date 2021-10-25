@@ -19,6 +19,10 @@ module.exports = {
     extraFileExtensions: ['.vue'],
   },
   ignorePatterns: ['*.css', '/*.*'],
+
+  // Some of the rules have Typescript equivalents that should be used instead.
+  // To check whether a replacement exists or not go to this page:
+  //   https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/README.md#supported-rules
   rules: {
     'indent': 'off',
     '@typescript-eslint/indent': ['error', 2],
@@ -58,6 +62,11 @@ module.exports = {
     'prefer-const': 'off',
 
     '@typescript-eslint/no-explicit-any': 'off',
+
+    'no-var': 'error',
+
+    'comma-spacing': 'off',
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
 
     'vue/mustache-interpolation-spacing': ['error', 'never'],
   
