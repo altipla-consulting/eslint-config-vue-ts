@@ -23,9 +23,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.1.0",
-    "@typescript-eslint/parser": "^5.2.0",
-    "eslint": "^8.0.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^8.2.0"
   }
 }

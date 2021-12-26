@@ -7,7 +7,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:vue/essential',
+    'plugin:vue/vue3-strongly-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   parser: 'vue-eslint-parser',
@@ -69,12 +69,20 @@ module.exports = {
     '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
 
     'vue/mustache-interpolation-spacing': ['error', 'never'],
-  
-    // Disable root validation until it adapts to Vue 3 where we can have multiple
-    // of them. I guess this rule will disappear once that occurs.
-    'vue/valid-template-root': ['off'],
-    'vue/no-multiple-template-root': ['off'],
-    'vue/no-v-for-template-key': ['off'],
+    'vue/this-in-template': ['error', 'never'],
+    'vue/html-self-closing': 'off',
+    'vue/max-attributes-per-line': ['error', { singleline: { max: 100 }, multiline: { max: 1 } }],
+    'vue/component-definition-name-casing': ['error', 'kebab-case'],
+    'vue/require-default-prop': 'off',
+    'vue/singleline-html-element-content-newline': 'off',
+
+    'no-restricted-imports': [
+      'error',
+      {
+        name: 'lodash',
+        message: 'Please use lodash-es instead.',
+      },
+    ],
   },
   plugins: [
     'vue',
