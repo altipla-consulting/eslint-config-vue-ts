@@ -68,6 +68,8 @@ module.exports = {
     'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
 
+    '@typescript-eslint/no-non-null-assertion': 'off',
+
     'vue/mustache-interpolation-spacing': ['error', 'never'],
     'vue/this-in-template': ['error', 'never'],
     'vue/html-self-closing': 'off',
