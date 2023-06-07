@@ -77,6 +77,8 @@ module.exports = {
     'vue/component-definition-name-casing': ['error', 'kebab-case'],
     'vue/require-default-prop': 'off',
     'vue/singleline-html-element-content-newline': 'off',
+    'vue/no-setup-props-destructure': 'off',
+    'vue/html-indent': 'error',
 
     'no-restricted-imports': [
       'error',
