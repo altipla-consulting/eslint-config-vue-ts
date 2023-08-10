@@ -79,6 +79,10 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-indent': 'error',
 
+    '@typescript-eslint/no-floating-promises': 'error',
+    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/no-misused-promises': 'error',
+
     'no-restricted-imports': [
       'error',
       {
