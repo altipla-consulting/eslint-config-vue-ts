@@ -40,9 +40,6 @@ jobs:
     - name: Install deps
       run: npm ci
 
-    - name: Build
-      run: npm run lib
-
     - name: Set version in code
       run: npm version ${{ steps.version.outputs.VERSION }}
 
