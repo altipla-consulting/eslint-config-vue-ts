@@ -78,6 +78,7 @@ module.exports = {
     'vue/require-default-prop': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-indent': 'error',
+    'vue/multi-word-component-names': 'off',
 
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/await-thenable': 'error',
