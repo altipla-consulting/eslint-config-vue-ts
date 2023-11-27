@@ -29,32 +29,44 @@ module.exports = {
 
     'linebreak-style': ['error', 'unix'],
 
-    'quotes': 'off',
-    '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
-
-    'semi': 'off',
-    '@typescript-eslint/semi': ['error', 'never'],
-
-    'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-
-    'dot-notation': 'off',
-    '@typescript-eslint/dot-notation': 'error',
-
     'eol-last': 'error',
     'key-spacing': 'error',
 
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
 
-    // Typescript compiler already checks this type of errors.
-    'no-undef': 'off',
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
 
     'space-before-blocks': 'error',
     'space-infix-ops': 'error',
+    'spaced-comment': ['error', 'always'],
 
-    'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+    'comma-spacing': 'off',
+    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
+
+    'function-paren-newline': ['error', 'consistent'],
+    'space-in-parens': ['error', 'never'],
+
+    'no-trailing-spaces': ['error', { skipBlankLines: true }],
+    'func-call-spacing': 'off',
+    '@typescript-eslint/func-call-spacing': ['error', 'never'],
+    'array-bracket-spacing': ['error', 'never'],
+
+    'quotes': 'off',
+    '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
+
+    'semi': 'off',
+    '@typescript-eslint/semi': ['error', 'never'],
+    
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+
+    'dot-notation': 'off',
+    '@typescript-eslint/dot-notation': 'error',
+
+    // Typescript compiler already checks this type of errors.
+    'no-undef': 'off',
 
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '_', argsIgnorePattern: '_' }],
@@ -65,10 +77,21 @@ module.exports = {
 
     'no-var': 'error',
 
-    'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
-
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-floating-promises': 'error',
+    '@typescript-eslint/await-thenable': 'error',
+    '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { arguments: false } }],
+    
+    'arrow-parens': ['error', 'as-needed'],
+    'no-confusing-arrow': ['error', { allowParens: false }],
+
+    'no-restricted-imports': [
+      'error',
+      {
+        name: 'lodash',
+        message: 'Please use lodash-es instead.',
+      },
+    ],
 
     'vue/mustache-interpolation-spacing': ['error', 'never'],
     'vue/this-in-template': ['error', 'never'],
@@ -79,28 +102,6 @@ module.exports = {
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-indent': 'error',
     'vue/multi-word-component-names': 'off',
-
-    '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/await-thenable': 'error',
-
-    'no-restricted-imports': [
-      'error',
-      {
-        name: 'lodash',
-        message: 'Please use lodash-es instead.',
-      },
-    ],
-
-    '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { arguments: false } }],
-    'spaced-comment': ['error', 'always'],
-    'no-trailing-spaces': ['error', { skipBlankLines: true }],
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': ['error', 'never'],
-    'arrow-parens': ['error', 'as-needed'],
-    'function-paren-newline': ['error', 'consistent'],
-    'space-in-parens': ['error', 'never'],
-    'array-bracket-spacing': ['error', 'never'],
-    'no-confusing-arrow': ['error', { allowParens: false }],
   },
   plugins: [
     'vue',
