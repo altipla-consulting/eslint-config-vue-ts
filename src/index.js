@@ -65,6 +65,15 @@ module.exports = {
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'error',
 
+    'vue/html-closing-bracket-spacing': [
+      'error',
+      {
+        startTag: 'never',
+        endTag: 'never',
+        selfClosingTag: 'always',
+      },
+    ],
+
     // Typescript compiler already checks this type of errors.
     'no-undef': 'off',
 
