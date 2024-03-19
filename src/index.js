@@ -18,7 +18,7 @@ module.exports = {
     project: './tsconfig.json',
     extraFileExtensions: ['.vue'],
   },
-  ignorePatterns: ['*.css', '/*.*'],
+  ignorePatterns: ['*.css'],
 
   // Some of the rules have Typescript equivalents that should be used instead.
   // To check whether a replacement exists or not go to this page:
