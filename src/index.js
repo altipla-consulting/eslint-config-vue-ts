@@ -37,6 +37,7 @@ module.exports = {
 
     'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
+    'curly': 'error',
 
     'space-before-blocks': 'error',
     'space-infix-ops': 'error',
