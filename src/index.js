@@ -84,6 +84,7 @@ module.exports = {
     'prefer-const': 'off',
 
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'error',
 
     'no-var': 'error',
 
