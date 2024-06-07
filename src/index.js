@@ -93,7 +93,6 @@ module.exports = {
     '@typescript-eslint/await-thenable': 'error',
     '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { arguments: false } }],
     
-    'arrow-parens': ['error', 'as-needed'],
     'no-confusing-arrow': ['error', { allowParens: false }],
 
     'no-restricted-imports': [
@@ -104,7 +103,6 @@ module.exports = {
       },
     ],
 
-    'vue/mustache-interpolation-spacing': ['error', 'never'],
     'vue/this-in-template': ['error', 'never'],
     'vue/html-self-closing': 'off',
     'vue/max-attributes-per-line': ['error', { singleline: { max: 100 }, multiline: { max: 1 } }],
