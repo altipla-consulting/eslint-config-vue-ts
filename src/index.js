@@ -61,7 +61,7 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'never'],
     
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
+    '@typescript-eslint/comma-dangle': ['off'],
 
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'error',
