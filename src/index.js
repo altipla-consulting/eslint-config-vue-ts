@@ -25,7 +25,7 @@ module.exports = {
   //   https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/README.md#supported-rules
   rules: {
     'indent': 'off',
-    '@typescript-eslint/indent': ['error', 2],
+    '@typescript-eslint/indent': ['off'],
 
     'linebreak-style': ['error', 'unix'],
 
