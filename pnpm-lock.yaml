@@ -23,6 +23,10 @@ importers:
       vue-eslint-parser:
         specifier: ^9.4.3
         version: 9.4.3(eslint@9.9.1)
+    devDependencies:
+      braces:
+        specifier: ^3.0.3
+        version: 3.0.3
 
 packages:
 
