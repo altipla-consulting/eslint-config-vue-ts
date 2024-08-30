@@ -35,6 +35,7 @@ export default ts.config(js.configs.recommended, ...vue.configs['flat/recommende
     'space-infix-ops': 'error',
     'spaced-comment': ['error', 'always'],
     'function-paren-newline': ['error', 'consistent'],
+    'arrow-parens': 'off',
     'space-in-parens': ['error', 'never'],
     'no-trailing-spaces': [
       'error',
