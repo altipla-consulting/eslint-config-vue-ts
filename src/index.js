@@ -7,9 +7,10 @@ import js from '@eslint/js'
 export default ts.config(js.configs.recommended, ...vue.configs['flat/recommended'], ...ts.configs.recommended, {
   files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
   plugins: {
+    '@typescript-eslint': ts.plugin,
     vue,
   },
-  ignores: ['dist', 'node_modules'],
+  ignores: ['dist'],
   languageOptions: {
     globals: {
       ...globals.browser,
@@ -114,5 +115,6 @@ export default ts.config(js.configs.recommended, ...vue.configs['flat/recommende
     'vue/multi-word-component-names': 'off',
     'vue/attributes-order': 'off',
     'vue/mustache-interpolation-spacing': 'off',
+    'vue/no-v-html': 'off',
   },
 })
