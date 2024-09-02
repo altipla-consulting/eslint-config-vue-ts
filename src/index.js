@@ -1,71 +1,55 @@
+import vue from 'eslint-plugin-vue'
+import ts from 'typescript-eslint'
+import globals from 'globals'
+import parser from 'vue-eslint-parser'
+import js from '@eslint/js'
 
-module.exports = {
-  env: {
-    browser: true,
-    es2020: true,
-    node: true,
+export default ts.config(js.configs.recommended, ...vue.configs['flat/recommended'], ...ts.configs.recommended, {
+  files: ['**/*.ts', '**/*.tsx', '**/*.vue'],
+  plugins: {
+    '@typescript-eslint': ts.plugin,
+    vue,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-strongly-recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: '@typescript-eslint/parser',
+  ignores: ['dist'],
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.node,
+    },
+    parser,
     ecmaVersion: 11,
     sourceType: 'module',
-    project: './tsconfig.json',
-    extraFileExtensions: ['.vue'],
+    parserOptions: {
+      parser: ts.parser,
+      project: ['./tsconfig.json'],
+      extraFileExtensions: ['.vue'],
+    },
   },
-  ignorePatterns: ['*.css'],
-
-  // Some of the rules have Typescript equivalents that should be used instead.
-  // To check whether a replacement exists or not go to this page:
-  //   https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/README.md#supported-rules
   rules: {
-    'indent': 'off',
+    indent: 'off',
     '@typescript-eslint/indent': ['off'],
-
     'linebreak-style': ['error', 'unix'],
-
     'eol-last': 'error',
     'key-spacing': 'error',
-
-    'keyword-spacing': 'off',
-    '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
-
-    'object-curly-spacing': 'off',
-    '@typescript-eslint/object-curly-spacing': ['error', 'always'],
-    'curly': 'error',
-
+    curly: 'error',
     'space-before-blocks': 'error',
     'space-infix-ops': 'error',
     'spaced-comment': ['error', 'always'],
-
-    'comma-spacing': 'off',
-    '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
-
     'function-paren-newline': ['error', 'consistent'],
+    'arrow-parens': 'off',
     'space-in-parens': ['error', 'never'],
-
-    'no-trailing-spaces': ['error', { skipBlankLines: true }],
-    'func-call-spacing': 'off',
-    '@typescript-eslint/func-call-spacing': ['error', 'never'],
+    'no-trailing-spaces': [
+      'error',
+      {
+        skipBlankLines: true,
+      },
+    ],
     'array-bracket-spacing': ['error', 'never'],
-
-    'quotes': 'off',
-    '@typescript-eslint/quotes': ['error', 'single', { allowTemplateLiterals: true }],
-
-    'semi': 'off',
-    '@typescript-eslint/semi': ['error', 'never'],
-    
+    semi: ['error', 'never'],
     'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': 'off',
-
     'dot-notation': 'off',
     '@typescript-eslint/dot-notation': 'error',
-
     'vue/html-closing-bracket-spacing': [
       'error',
       {
@@ -74,27 +58,36 @@ module.exports = {
         selfClosingTag: 'always',
       },
     ],
-
-    // Typescript compiler already checks this type of errors.
     'no-undef': 'off',
-
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '_', argsIgnorePattern: '_' }],
-
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        varsIgnorePattern: '_',
+        argsIgnorePattern: '_',
+      },
+    ],
     'prefer-const': 'off',
-
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
-
     'no-var': 'error',
-
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: { arguments: false } }],
-    
-    'no-confusing-arrow': ['error', { allowParens: false }],
-
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        checksVoidReturn: {
+          arguments: false,
+        },
+      },
+    ],
+    'no-confusing-arrow': [
+      'error',
+      {
+        allowParens: false,
+      },
+    ],
     'no-restricted-imports': [
       'error',
       {
@@ -102,18 +95,26 @@ module.exports = {
         message: 'Please use lodash-es instead.',
       },
     ],
-
     'vue/this-in-template': ['error', 'never'],
     'vue/html-self-closing': 'off',
-    'vue/max-attributes-per-line': ['error', { singleline: { max: 100 }, multiline: { max: 1 } }],
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: {
+          max: 100,
+        },
+        multiline: {
+          max: 1,
+        },
+      },
+    ],
     'vue/component-definition-name-casing': ['error', 'kebab-case'],
     'vue/require-default-prop': 'off',
     'vue/singleline-html-element-content-newline': 'off',
     'vue/html-indent': 'error',
     'vue/multi-word-component-names': 'off',
+    'vue/attributes-order': 'off',
+    'vue/mustache-interpolation-spacing': 'off',
+    'vue/no-v-html': 'off',
   },
-  plugins: [
-    'vue',
-    '@typescript-eslint',
-  ],
-}
+})
