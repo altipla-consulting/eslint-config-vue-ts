@@ -24,7 +24,6 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "^9.9.1",
     "eslint-plugin-vue": "^9.27.0",
     "globals": "^15.9.0",
     "typescript-eslint": "^8.3.0",
@@ -32,5 +31,8 @@
   },
   "devDependencies": {
     "prettier": "^3.3.3"
+  },
+  "peerDependencies": {
+    "eslint": "9.x"
   }
 }
