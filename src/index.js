@@ -122,6 +122,8 @@ export default ts.config(
     },
   },
   {
+    // These ignores are on a separate config object so ESLint will consider them global
+    // On ESLint 9.x folders are omitted on non global ignores
     ignores: ['dist/', 'tmp/', 'src/env.d.ts'],
   },
 )
