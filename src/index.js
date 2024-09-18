@@ -10,7 +10,7 @@ export default ts.config(js.configs.recommended, ...vue.configs['flat/recommende
     '@typescript-eslint': ts.plugin,
     vue,
   },
-  ignores: ['dist/', 'tmp', 'src/env.d.ts'],
+  ignores: ['dist/', 'tmp/', 'src/env.d.ts'],
   languageOptions: {
     globals: {
       ...globals.browser,
